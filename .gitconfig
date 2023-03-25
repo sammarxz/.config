@@ -1,0 +1,18 @@
+[user]
+	name = Sam Marxz
+	email = sammarxzz@gmail.com
+[code]
+	editor = code
+[core]
+	editor = code --wait
+[push]
+	followTags = true
+[alias]
+	c = !git add --all && git commit -m
+	s = !git status -s
+  p = !git push
+	l = !git log --pretty=format:'%C(red)%h%C(white)%d %C(green)%s - %C(cyan)%cn, %C(blue)%cr'
+	amend = !git add --all && git commit --amend --no-edit
+	count = !git shortlog -s --grep
+[init]
+	defaultBranch = main
