@@ -1,6 +1,8 @@
 # .config
 My Personal .config files
 
+![i3wm + i3status](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cww1td8c0x56ilx9c7nf.png)
+
 ## i3wm
 
 ### Dependencies
