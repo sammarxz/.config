@@ -14,6 +14,14 @@
 set $mod Mod4
 
 
+
+#####################################################################################################################
+#################                          Define HDMI screen resolution                        #####################
+#####################################################################################################################
+
+exec xrandr --outtup DP-1 --mode 1920x1080
+
+
 #####################################################################################################################
 #################                          Define the movements keys - variables                    #################
 #####################################################################################################################
@@ -259,7 +267,7 @@ bindsym $mod+Return exec --no-startup-id alacritty;focus
 
 bindsym control+mod1+u exec --no-startup-id pavucontrol
 
-bindsym $mod+Shift+Return exec --no-startup-id nemo;focus
+bindsym $mod+Shift+Return exec --no-startup-id nautilus;focus
 
 
 
