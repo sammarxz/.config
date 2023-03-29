@@ -1,7 +1,8 @@
-local ensure_packer = function() local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -25,21 +26,21 @@ end
 return packer.startup(function(use)
   use('wbthomason/packer.nvim')
 
-  use('shaunsingh/nord.nvim') -- colorscheme
+  use('shaunsingh/nord.nvim')           -- colorscheme
   use('christoomey/vim-tmux-navigator') -- tmux & split window navigation
-  use('szw/vim-maximizer') -- maximizes and restores current window
-  use('tpope/vim-surround') -- rapid substituition
-  use('mattn/emmet-vim') -- emmet for vim
-  use('numToStr/Comment.nvim') -- comment
-  use('nvim-lua/plenary.nvim') -- lua functions
-  use('nvim-tree/nvim-tree.lua') -- file explorer
-  use('kyazdani42/nvim-web-devicons') -- icons
-  use('nvim-lualine/lualine.nvim') -- statusline
-  use('akinsho/toggleterm.nvim') -- ToggleTerm
+  use('szw/vim-maximizer')              -- maximizes and restores current window
+  use('tpope/vim-surround')             -- rapid substituition
+  use('mattn/emmet-vim')                -- emmet for vim
+  use('numToStr/Comment.nvim')          -- comment
+  use('nvim-lua/plenary.nvim')          -- lua functions
+  use('nvim-tree/nvim-tree.lua')        -- file explorer
+  use('kyazdani42/nvim-web-devicons')   -- icons
+  use('nvim-lualine/lualine.nvim')      -- statusline
+  use('akinsho/toggleterm.nvim')        -- ToggleTerm
 
   -- fuzzy finding
-  use({ 'nvim-telescope/telescope-fzf-native.nvim', run='make' })
-  use({ 'nvim-telescope/telescope.nvim', branch='0.1.x' })
+  use({ 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' })
+  use({ 'nvim-telescope/telescope.nvim', branch = '0.1.x' })
 
   -- autocompletion
   use('hrsh7th/nvim-cmp')
@@ -58,7 +59,7 @@ return packer.startup(function(use)
   -- configuring lsp servers
   use('neovim/nvim-lspconfig')
   use('hrsh7th/cmp-nvim-lsp')
-  use({ 'glepnir/lspsaga.nvim', branch='main' })
+  use({ 'glepnir/lspsaga.nvim', branch = 'main' })
   use('jose-elias-alvarez/typescript.nvim')
   use('onsails/lspkind.nvim')
 
@@ -76,7 +77,7 @@ return packer.startup(function(use)
   })
 
   -- auto closing
-  use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+  use("windwp/nvim-autopairs")                                 -- autoclose parens, brackets, quotes, etc...
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
 
   -- git integration
@@ -86,4 +87,3 @@ return packer.startup(function(use)
     require('packer').sync()
   end
 end)
-
