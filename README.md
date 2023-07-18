@@ -1,6 +1,8 @@
 # .config
 My Personal .config files
 
+[Setup Article on my dev.to profile](https://dev.to/sammarxz/meu-ambiente-de-desenvolvimento-minimalista-i3wm-i3-status-rofi-alacritty-zsh-e-neovim-20e3)
+
 ![i3wm + i3status](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cww1td8c0x56ilx9c7nf.png)
 
 ## i3wm
