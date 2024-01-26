@@ -26,7 +26,7 @@ end
 return packer.startup(function(use)
   use('wbthomason/packer.nvim')
 
-  use('shaunsingh/nord.nvim')           -- colorscheme
+  use('folke/tokyonight.nvim')           -- colorscheme
   use('christoomey/vim-tmux-navigator') -- tmux & split window navigation
   use('szw/vim-maximizer')              -- maximizes and restores current window
   use('tpope/vim-surround')             -- rapid substituition
@@ -35,7 +35,10 @@ return packer.startup(function(use)
   use('nvim-lua/plenary.nvim')          -- lua functions
   use('nvim-tree/nvim-tree.lua')        -- file explorer
   use('kyazdani42/nvim-web-devicons')   -- icons
-  use('nvim-lualine/lualine.nvim')      -- statusline
+  use({
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  })      -- statusline
   use('akinsho/toggleterm.nvim')        -- ToggleTerm
 
   -- fuzzy finding
@@ -75,6 +78,8 @@ return packer.startup(function(use)
       ts_update()
     end,
   })
+
+  use('xiyaowong/transparent.nvim')
 
   -- auto closing
   use("windwp/nvim-autopairs")                                 -- autoclose parens, brackets, quotes, etc...

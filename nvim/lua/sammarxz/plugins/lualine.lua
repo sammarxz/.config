@@ -3,4 +3,8 @@ if not setup then
   return
 end
 
-lualine.setup()
+lualine.setup({
+  options = {
+    theme = 'tokyonight'
+  }
+})

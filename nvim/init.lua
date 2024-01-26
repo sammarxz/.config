@@ -9,13 +9,14 @@ require("sammarxz.core.colorscheme")
 -- Plugins Config
 require("sammarxz.plugins.comment")
 require("sammarxz.plugins.nvim-tree")
-require("sammarxz.plugins.lualine")
+-- require("sammarxz.plugins.lualine")
 require("sammarxz.plugins.telescope")
 require("sammarxz.plugins.nvim-cmp")
 require("sammarxz.plugins.autopairs")
 require("sammarxz.plugins.gitsigns")
 require("sammarxz.plugins.treesitter")
 require("sammarxz.plugins.toggleterm")
+require("sammarxz.plugins.transparent")
 
 -- Lsp Plugins
 require("sammarxz.plugins.lsp.mason")
